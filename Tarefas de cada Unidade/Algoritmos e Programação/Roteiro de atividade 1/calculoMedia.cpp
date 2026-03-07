@@ -1,24 +1,30 @@
-#include <iostream>//biblioteca para entrada e saída de dados
-using namespace std; //permite usar cout e cin sem precisar escrever std:: antes
+#include <iostream> // biblioteca de entrada e saída
+using namespace std; // evita a necessidade de usar "std::" antes de cada comando da biblioteca padrão
 
-int main() { 
-    float n1, n2, n3, media; //variáveis para armazenar as notas e a média
-    
-    cout << "Digite a primeira nota: "; //solicita a primeira nota
-    cin >> n1; //lê a primeira nota digitada pelo usuário
-    cout << "Digite a segunda nota: ";
-    cin >> n2;
-    cout << "Digite a terceira nota: ";
-    cin >> n3;
-    
-    media = (n1 + n2 + n3) / 3; //calcula a média das três notas
-    
-    cout << "A media é: " << media << endl; //exibe a média calculada
-    
-    return 0;//indica que o programa terminou com sucesso
+int main() { // função principal do programa
+
+    float matematica, portugues, ciencias, media; // declaração de variáveis para armazenar as notas de Matemática, Português, Ciências e a média
+
+    cout << "Digite a nota de Matematica: "; // solicita ao usuário que digite a nota de Matemática
+    cin >> matematica; // lê a nota de Matemática digitada pelo usuário e armazena na variável "matematica"
+
+    cout << "Digite a nota de Portugues: ";
+    cin >> portugues; 
+
+    cout << "Digite a nota de Ciencias: "; 
+    cin >> ciencias; 
+
+    media = (matematica + portugues + ciencias) / 3; // calcula a média das notas usando a fórmula: média = (nota1 + nota2 + nota3) / 3
+
+    if(media >= 7){ // verifica se a média é maior ou igual a 7
+        cout << "Media: " << media << " - Aprovado" << endl; // exibe a média calculada e a mensagem "Aprovado" para o usuário
+    }else{ // caso contrário, se a média for menor que 7
+        cout << "Media: " << media << " - Reprovado" << endl; // exibe a média calculada e a mensagem "Reprovado" para o usuário
+    }
+
+    return 0; // indica que o programa terminou com sucesso
 }
-
 /*
 DESAFIO 1 - Calcula a media de notas 
-Ele trabalha com entrada de dados , variáveis e operação matemática simples
+Faça um programa que leia as notas de um aluno em três disciplinas: Matemática, Português e Ciências. Em seguida, calcule a média dessas notas e exiba se o aluno foi aprovado ou reprovado. Considere que a média mínima para aprovação é 7.
 */

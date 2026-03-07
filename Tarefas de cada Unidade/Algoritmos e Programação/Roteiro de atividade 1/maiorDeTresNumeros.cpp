@@ -1,33 +1,27 @@
-#include <iostream>
-using namespace std;
+#include <iostream> // biblioteca de entrada e saída
+using namespace std; // evita a necessidade de usar "std::" antes de cada comando da biblioteca padrão
 
-int main() {
-    float num1, num2, num3, maior;
+int main(){ // função principal do programa
 
-    cout << "Digite o primeiro numero: ";
-    cin >> num1;
+    int a,b,c,maior;// declaração de variáveis para armazenar os três números digitados pelo usuário e o maior número encontrado
 
-    cout << "Digite o segundo numero: ";
-    cin >> num2;
+    cout << "Digite tres numeros: ";// solicita ao usuário que digite três números
+    cin >> a >> b >> c;// lê os três números digitados pelo usuário e armazena nas variáveis "a", "b" e "c"
 
-    cout << "Digite o terceiro numero: ";
-    cin >> num3;
+    maior = a;// assume inicialmente que "a" é o maior número
 
-    maior = num1; // assume que o primeiro número é o maior inicialmente
-
-    if (num2 > maior) { // compara o segundo número com o maior atual
-        maior = num2; // se o segundo número for maior, atualiza o maior
+    if(b > maior){ // verifica se "b" é maior que o maior número atual
+        maior = b;// se for, atualiza o valor do maior número para "b"
     }
 
-    if (num3 > maior) { // compara o terceiro número com o maior atual
-        maior = num3; // se o terceiro número for maior, atualiza o maior
+    if(c > maior){ // verifica se "c" é maior que o maior número atual
+        maior = c;//    se for, atualiza o valor do maior número para "c"
     }
 
-    cout << "O maior numero e: " << maior << endl; 
+    cout << "Maior numero: " << maior << endl;// exibe o maior número encontrado para o usuário
 
-    return 0;
+    return 0;// indica que o programa terminou com sucesso
 }
-
 /*
     O programa lê três números do usuário e determina qual deles é o maior. Ele compara cada número com o maior atual e atualiza o valor do maior conforme necessário. No final, exibe o maior número encontrado.
 */
